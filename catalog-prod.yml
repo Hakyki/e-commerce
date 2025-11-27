@@ -1,0 +1,46 @@
+spring:
+  application:
+    name: catalog
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ecomapp?currentSchema=catalog
+    username: postgres
+    password: ckfdenfnjgdkj
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka:8761/eureka
+
+server:
+  port: 8000
+  servlet:
+    context-path: /catalog
+
+custom:
+  page:
+    default-size: 10
+  strategy:
+    popularity:
+      item-is-considered-popular-at-orders-count: 25
+    shoes-size:
+      min: 30
+      max: 46
+  category:
+    img-path-prefix:
+      men: catalog/src/main/resources/images/category/men/
+      women: catalog/src/main/resources/images/category/women/
+
+springdoc:
+  api-docs:
+    path: /docs
+  swagger-ui:
+    enabled: false
