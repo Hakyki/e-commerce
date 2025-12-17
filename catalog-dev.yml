@@ -3,9 +3,9 @@ spring:
     name: catalog
 
   datasource:
-    url: jdbc:postgresql://localhost:5432/ecomapp?currentSchema=catalog
-    username: postgres
-    password: ckfdenfnjgdkj
+    url: jdbc:postgresql://localhost:5432/******?currentSchema=catalog
+    username: 
+    password: 
     driver-class-name: org.postgresql.Driver
 
   jpa:
